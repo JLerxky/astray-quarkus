@@ -7,11 +7,11 @@
 #
 # Then, build the image with:
 #
-# docker build -f src/main/docker/Dockerfile.native -t quarkus/astray-quarkus-jler .
+# docker build -f src/main/docker/Dockerfile.native -t quarkus/astray-quarkus .
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8080:8080 quarkus/astray-quarkus-jler
+# docker run -i --rm -p 8080:8080 quarkus/astray-quarkus
 #
 ###
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.8

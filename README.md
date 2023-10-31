@@ -47,6 +47,13 @@ You can then execute your native executable with: `./build/astray-quarkus-0.1.0-
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling.
 
+## Related Guides
+
+- Eclipse Vert.x ([guide](https://quarkus.io/guides/vertx)): Write reactive applications with the Vert.x API
+- Elytron Security OAuth 2.0 ([guide](https://quarkus.io/guides/security-oauth2)): Secure your applications with OAuth2 opaque tokens
+- RESTEasy Reactive ([guide](https://quarkus.io/guides/resteasy-reactive)): A Jakarta REST implementation utilizing build time processing and Vert.x. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
+- Reactive PostgreSQL client ([guide](https://quarkus.io/guides/reactive-sql-clients)): Connect to the PostgreSQL database using the reactive pattern
+
 ## Provided Code
 
 ### RESTEasy Reactive

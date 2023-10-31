@@ -1,3 +1,7 @@
+# Gradle
+.gradle/
+build/
+
 # Eclipse
 .project
 .classpath
@@ -28,6 +32,8 @@ nb-configuration.xml
 *.orig
 *.rej
 
-# Gradle
-.gradle/
-build/
+# Local environment
+.env
+
+# Plugin directory
+/.quarkus/cli/plugins/
