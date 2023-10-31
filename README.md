@@ -1,4 +1,4 @@
-# astray-quarkus project
+# astray-quarkus
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
@@ -7,29 +7,50 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
-```
+```shell script
 ./gradlew quarkusDev
 ```
 
+> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+
 ## Packaging and running the application
 
-The application can be packaged using `./gradlew quarkusBuild`.
-It produces the `astray-quarkus-1.0.0-SNAPSHOT-runner.jar` file in the `build` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `build/lib` directory.
-
-The application is now runnable using `java -jar build/astray-quarkus-1.0.0-SNAPSHOT-runner.jar`.
-
-If you want to build an _über-jar_, just add the `--uber-jar` option to the command line:
+The application can be packaged using:
+```shell script
+./gradlew build
 ```
-./gradlew quarkusBuild --uber-jar
+It produces the `quarkus-run.jar` file in the `build/quarkus-app/` directory.
+Be aware that it’s not an _über-jar_ as the dependencies are copied into the `build/quarkus-app/lib/` directory.
+
+The application is now runnable using `java -jar build/quarkus-app/quarkus-run.jar`.
+
+If you want to build an _über-jar_, execute the following command:
+```shell script
+./gradlew build -Dquarkus.package.type=uber-jar
 ```
+
+The application, packaged as an _über-jar_, is now runnable using `java -jar build/*-runner.jar`.
 
 ## Creating a native executable
 
-You can create a native executable using: `./gradlew build -Dquarkus.package.type=native`.
+You can create a native executable using: 
+```shell script
+./gradlew build -Dquarkus.package.type=native
+```
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: `./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true`.
+Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
+```shell script
+./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
+```
 
-You can then execute your native executable with: `./build/astray-quarkus-1.0.0-SNAPSHOT-runner`
+You can then execute your native executable with: `./build/astray-quarkus-0.1.0-runner`
 
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling#building-a-native-executable.
+If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling.
+
+## Provided Code
+
+### RESTEasy Reactive
+
+Easily start your Reactive RESTful Web Services
+
+[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
